@@ -1,6 +1,6 @@
 <?php
 
-include './UserSkeleton';
+require_once __DIR__ . '/UserSkeleton.php';
 
 class User {
     private $conn;
@@ -15,8 +15,8 @@ class User {
 
         if($stmt = $this->conn->prepare($query)) {
             $email = $userSkeleton->getEmail();
-            $first_name = $userSkeleton->getFirst_name();
-            $last_name = $userSkeleton->getLast_name();
+            $first_name = $userSkeleton->getFirstName();
+            $last_name = $userSkeleton->getLastName();
             $password = $userSkeleton->getPassword();
             $created_at = $userSkeleton->getCreatedAt();
 
