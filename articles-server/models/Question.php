@@ -1,6 +1,6 @@
 <?php
 
-include './QuestionSkeleton.php';
+require_once __DIR__ . '/QuestionSkeleton.php';
 
 class Question {
     private $conn;

@@ -1,6 +1,5 @@
 <?php
-class UserSkeleton
-{
+class UserSkeleton {
     private $user_id;
     private $email;
     private $first_name;
@@ -22,7 +21,7 @@ class UserSkeleton
 
 
 
-    public function getUser_id() {
+    public function getUserId() {
         return $this->user_id;
     }
 
@@ -32,12 +31,12 @@ class UserSkeleton
     }
 
 
-    public function getFirst_name() {
+    public function getFirstName() {
         return $this->first_name;
     }
 
 
-    public function getLast_name() {
+    public function getLastName() {
         return $this->last_name;
     }
 
