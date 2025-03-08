@@ -1,6 +1,6 @@
 <?php
 
-require 'UserSkeleton';
+include './UserSkeleton';
 
 class User {
     private $conn;
@@ -12,7 +12,7 @@ class User {
 
     public function createUser(UserSkeleton $userSkeleton) {
         $query = 'INSERT INTO users (email, first_name, last_name, password, created_at) VALUES (?, ?, ?, ?, ?)';
-        
+
         if($stmt = $this->conn->prepare($query)) {
             $email = $userSkeleton->getEmail();
             $first_name = $userSkeleton->getFirst_name();
