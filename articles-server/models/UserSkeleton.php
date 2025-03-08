@@ -6,15 +6,18 @@ class UserSkeleton
     private $first_name;
     private $last_name;
     private $password;
+    private $created_at;
 
 
-    public function __construct($user_id, $email, $first_name, $last_name, $password)
+    public function __construct($user_id, $email, $first_name, $last_name, $password, $created_at)
     {
         $this->user_id = $user_id;
         $this->email = $email;
         $this->first_name = $first_name;
         $this->last_name = $last_name;
         $this->password = $password;
+        $this->created_at = $created_at;
+        
     }
 
 
@@ -42,6 +45,10 @@ class UserSkeleton
 
     public function getPassword() {
         return $this->password;
+    }
+
+    public function getCreatedAt() {
+        return $this->created_at;
     }
 
 
