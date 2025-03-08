@@ -9,4 +9,8 @@ $sql_questions = "CREATE TABLE IF NOT EXISTS questions (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 ) ENGINE=InnoDB;";
 
+if (!$conn->query($sql_questions)) {
+    die("Migration failed: " . $conn->error);
+}
+
 ?>

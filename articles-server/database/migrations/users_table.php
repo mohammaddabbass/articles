@@ -10,4 +10,8 @@ $sql_users= "CREATE TABLE IF NOT EXISTS users (
     PRIMARY KEY (user_id)
 ) ENGINE=InnoDB;";
 
+if (!$conn->query($sql_users)) {
+    die("Migration failed: " . $conn->error);
+}
+
 ?>
