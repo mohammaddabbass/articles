@@ -8,4 +8,4 @@ foreach ($seedFiles as $file) {
     require_once $file;
 }
 
-echo "All seeds executed successfully.";
+// echo "All seeds executed successfully.";

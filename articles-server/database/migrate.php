@@ -8,4 +8,4 @@ foreach ($migrationFiles as $file) {
     require_once $file;
 }
 
-echo "All migrations executed successfully.";
+// echo "All migrations executed successfully.";
