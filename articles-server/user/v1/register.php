@@ -3,6 +3,7 @@ require '../../connection/connection.php';
 include '../../models/User.php';
 require_once  '../../models/UserSkeleton.php';
 
+
 if($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(["message" => "Invalid Request Method"]);
@@ -19,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $last_name = $_POST['last_name'];
     $password = $_POST['password'];
 
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $hashed_password = hash('sha256', $password);
 
     $user = new User($conn);
     $userRegiter = $user->getUser($email);

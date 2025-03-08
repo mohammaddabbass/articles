@@ -11,7 +11,7 @@ class Question {
     }
 
     public function insertQuestion(QuestionSkeleton $questionSkeleton) {
-        $query = 'INSERT INTO questions (user_id, question_text, answer) VALUES (?, ?, ?, ?)';
+        $query = 'INSERT INTO questions (user_id, question_text, answer) VALUES (?, ?, ?)';
 
         if($stmt = $this->conn->prepare($query)) {
             $user_id = $questionSkeleton->getUser_id();
