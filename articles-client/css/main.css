@@ -145,9 +145,13 @@ a {
 
 @media screen and (max-width: 786px) {
     .form {
-        height: 40vh;
+        height: 50vh;
         width: 85vw;
         padding: 2rem;
+    }
+
+    .login {
+        height: 40vh;
     }
 
 }
