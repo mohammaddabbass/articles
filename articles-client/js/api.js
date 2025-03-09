@@ -82,7 +82,6 @@ archipedia.load_signup = async () => {
 
             const result = await archipedia.post_data(archipedia.signup.signup_api, formData);
             console.log(result);
-            console.log(result);
             if(result && result.user) {
                 console.log("signed up user is: ", result.user);
                 localStorage.setItem('user', JSON.stringify(result.user));
@@ -103,7 +102,72 @@ archipedia.load_getQuestions = async () => {
         const result = await archipedia.get_data(archipedia.getQuestions.getQuestions_api);
         console.log(result);
 
+        if(result && result.questions) {
+            const questionsContainer = document.getElementById('questions-container');
+
+            questionsContainer.innerHTML = '';
+
+            result.questions.forEach(question => {
+                const questionCard =
+                 `<div class="question-card">
+                    <div class="question-part">
+                        <h3 class="question">${question.question_text} </h3>
+                    </div>
+                    <hr>
+                    <div class="answer-part">
+                        <p class="answer">${question.answer}</p>
+                    </div>
+                </div>`;
+                questionsContainer.innerHTML += questionCard;
+            });
+        }
+
     } catch (error) {
         console.log(error);
     }
+}
+
+
+archipedia.load_addQuestion = async () => {
+    archipedia.addQuestion = {};
+    archipedia.addQuestion.addQuestion_api = archipedia.base_api + "insertQuestion.php";
+
+
+
+    const questionForm = document.getElementById("question-form");
+
+    questionForm.addEventListener("submit", async(event) => {
+        event.preventDefault();
+
+        const questionText = document.getElementById('question-text').value;
+        const answer = document.getElementById('answer').value;
+
+        try {
+            const storedUser = localStorage.getItem('user'); 
+            let user = {}; 
+            if (storedUser) {
+                user = JSON.parse(storedUser); 
+                console.log("User ID:", user.id); 
+            } else {
+                console.log("No user found in local storage.");
+                return; 
+            }
+            const formData = new FormData();
+            formData.append("question_text", questionText);
+            formData.append("answer", answer);
+            formData.append("user_id", user.id);
+
+            
+
+            const result = await archipedia.post_data(archipedia.addQuestion.addQuestion_api, formData);
+            console.log(result);
+
+            if(result && result.message) {
+                console.log("this is the message fromm the result", result);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+
+    });
 }

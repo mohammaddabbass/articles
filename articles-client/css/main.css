@@ -288,6 +288,7 @@ hr {
 }
 
 .question-answer-form {
+    height: 60vh;
     width: 50vw;
 }
 
@@ -303,9 +304,20 @@ hr {
     min-height: 100px;
 }
 
+.question-answer-form .button {
+    margin: 1rem 0rem;
+    width: 30%;
+}
+
 
 @media screen and (max-width: 786px) {
     .question-answer-form {
         width: 80%;
     }
+
+    .question-answer-form .button {
+        margin: 1rem 0rem;
+        width: unset;
+    }
+    
 }
