@@ -47,6 +47,7 @@ body {
 }
 
 .primary-outline-btn {
+    padding: 0.6rem 1.8rem;
     border: 3px solid var(--primary-color);
     background-color: var(--light-color);
     color: var(--primary-color);
@@ -133,6 +134,7 @@ a {
     left: 2rem;
 }
 
+
 @media screen and (max-width: 1300px) {
     .form {
         height: 50vh;
@@ -147,6 +149,7 @@ a {
         width: 90vw;
         padding: 2rem;
     }
+
 }
 
 
@@ -244,7 +247,7 @@ hr {
     }
 
     .search-container {
-        width: 60vw;
+        width: 50vw;
     }
 
     .question-card {
@@ -259,7 +262,7 @@ hr {
     }
 
     .search-container {
-        width: 70vw;
+        width: 65vw;
     }
 
     .question-card {
@@ -273,8 +276,14 @@ hr {
         left: 1rem;
     }
 
+    .logout {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
     .header {
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 }
 
@@ -288,6 +297,7 @@ hr {
 }
 
 .question-answer-form {
+    height: 60vh;
     width: 50vw;
 }
 
@@ -303,9 +313,20 @@ hr {
     min-height: 100px;
 }
 
+.question-answer-form .button {
+    margin: 1rem 0rem;
+    width: 30%;
+}
+
 
 @media screen and (max-width: 786px) {
     .question-answer-form {
         width: 80%;
     }
+
+    .question-answer-form .button {
+        margin: 1rem 0rem;
+        width: unset;
+    }
+    
 }

@@ -20,20 +20,15 @@
                 <input class="input-field search-input" type="search" name="search" id="search-input" placeholder="Search questions">
             </div>
 
-            <a href="faqs.html"><button class="button primary-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></a>
+            <div class="actions">
+
+                <a href="faqs.html"><button class="button primary-btn">+</button></a>
+                <button onclick=logout() class="logout button primary-outline-btn">Logout</button>
+            </div>
 
         </div>
 
-        <div class="questions-container">
-            <div class="question-card">
-                <div class="question-part">
-                    <h3 class="question">This is the Question of the first article, try adding a little bit of details </h3>
-                </div>
-                <hr>
-                <div class="answer-part">
-                    <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nisi perferendis quisquam odit ad tempore fugit? Excepturi tempora cum placeat dolores voluptas at reprehenderit, corporis maiores, repellat cupiditate repellendus, esse deleniti omnis! Blanditiis eos at error odit quos porro minima repellat expedita corrupti quo suscipit magnam id, dolorum doloribus cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim aliquam ut, voluptas commodi tempore sunt temporibus nesciunt doloremque reprehenderit blanditiis incidunt voluptatem nobis hic nihil beatae accusantium quidem eaque esse repellendus, cupiditate eius placeat! Nulla perspiciatis delectus sint cum nesciunt minima maxime sapiente labore eligendi, non, tempore, error molestiae.</p>
-                </div>
-            </div>
+        <div id="questions-container" class="questions-container">
 
             <div class="question-card">
                 <div class="question-part">
@@ -45,88 +40,12 @@
                 </div>
             </div>
 
-            <div class="question-card">
-                <div class="question-part">
-                    <h3 class="question">This is the Question of the first article</h3>
-                </div>
-                <hr>
-                <div class="answer-part">
-                    <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nisi perferendis quisquam odit ad tempore fugit? Excepturi tempora cum placeat dolores voluptas at reprehenderit, corporis maiores, repellat cupiditate repellendus, esse deleniti omnis! Blanditiis eos at error odit quos porro minima repellat expedita corrupti quo suscipit magnam id, dolorum doloribus cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim aliquam ut, voluptas commodi tempore sunt temporibus nesciunt doloremque reprehenderit blanditiis incidunt voluptatem nobis hic nihil beatae accusantium quidem eaque esse repellendus, cupiditate eius placeat! Nulla perspiciatis delectus sint cum nesciunt minima maxime sapiente labore eligendi, non, tempore, error molestiae.</p>
-                </div>
-            </div>
-
-            <div class="question-card">
-                <div class="question-part">
-                    <h3 class="question">This is the Question of the first article</h3>
-                </div>
-                <hr>
-                <div class="answer-part">
-                    <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nisi perferendis quisquam odit ad tempore fugit? Excepturi tempora cum placeat dolores voluptas at reprehenderit, corporis maiores, repellat cupiditate repellendus, esse deleniti omnis! Blanditiis eos at error odit quos porro minima repellat expedita corrupti quo suscipit magnam id, dolorum doloribus cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim aliquam ut, voluptas commodi tempore sunt temporibus nesciunt doloremque reprehenderit blanditiis incidunt voluptatem nobis hic nihil beatae accusantium quidem eaque esse repellendus, cupiditate eius placeat! Nulla perspiciatis delectus sint cum nesciunt minima maxime sapiente labore eligendi, non, tempore, error molestiae.</p>
-                </div>
-            </div>
-
-            <div class="question-card">
-                <div class="question-part">
-                    <h3 class="question">This is the Question of the first article</h3>
-                </div>
-                <hr>
-                <div class="answer-part">
-                    <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nisi perferendis quisquam odit ad tempore fugit? Excepturi tempora cum placeat dolores voluptas at reprehenderit, corporis maiores, repellat cupiditate repellendus, esse deleniti omnis! Blanditiis eos at error odit quos porro minima repellat expedita corrupti quo suscipit magnam id, dolorum doloribus cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim aliquam ut, voluptas commodi tempore sunt temporibus nesciunt doloremque reprehenderit blanditiis incidunt voluptatem nobis hic nihil beatae accusantium quidem eaque esse repellendus, cupiditate eius placeat! Nulla perspiciatis delectus sint cum nesciunt minima maxime sapiente labore eligendi, non, tempore, error molestiae.</p>
-                </div>
-            </div>
-
-            <div class="question-card">
-                <div class="question-part">
-                    <h3 class="question">This is the Question of the first article</h3>
-                </div>
-                <hr>
-                <div class="answer-part">
-                    <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nisi perferendis quisquam odit ad tempore fugit? Excepturi tempora cum placeat dolores voluptas at reprehenderit, corporis maiores, repellat cupiditate repellendus, esse deleniti omnis! Blanditiis eos at error odit quos porro minima repellat expedita corrupti quo suscipit magnam id, dolorum doloribus cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim aliquam ut, voluptas commodi tempore sunt temporibus nesciunt doloremque reprehenderit blanditiis incidunt voluptatem nobis hic nihil beatae accusantium quidem eaque esse repellendus, cupiditate eius placeat! Nulla perspiciatis delectus sint cum nesciunt minima maxime sapiente labore eligendi, non, tempore, error molestiae.</p>
-                </div>
-            </div>
-
-            <div class="question-card">
-                <div class="question-part">
-                    <h3 class="question">This is the Question of the first article</h3>
-                </div>
-                <hr>
-                <div class="answer-part">
-                    <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nisi perferendis quisquam odit ad tempore fugit? Excepturi tempora cum placeat dolores voluptas at reprehenderit, corporis maiores, repellat cupiditate repellendus, esse deleniti omnis! Blanditiis eos at error odit quos porro minima repellat expedita corrupti quo suscipit magnam id, dolorum doloribus cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim aliquam ut, voluptas commodi tempore sunt temporibus nesciunt doloremque reprehenderit blanditiis incidunt voluptatem nobis hic nihil beatae accusantium quidem eaque esse repellendus, cupiditate eius placeat! Nulla perspiciatis delectus sint cum nesciunt minima maxime sapiente labore eligendi, non, tempore, error molestiae.</p>
-                </div>
-            </div>
-
-            <div class="question-card">
-                <div class="question-part">
-                    <h3 class="question">This is the Question of the first article</h3>
-                </div>
-                <hr>
-                <div class="answer-part">
-                    <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nisi perferendis quisquam odit ad tempore fugit? Excepturi tempora cum placeat dolores voluptas at reprehenderit, corporis maiores, repellat cupiditate repellendus, esse deleniti omnis! Blanditiis eos at error odit quos porro minima repellat expedita corrupti quo suscipit magnam id, dolorum doloribus cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim aliquam ut, voluptas commodi tempore sunt temporibus nesciunt doloremque reprehenderit blanditiis incidunt voluptatem nobis hic nihil beatae accusantium quidem eaque esse repellendus, cupiditate eius placeat! Nulla perspiciatis delectus sint cum nesciunt minima maxime sapiente labore eligendi, non, tempore, error molestiae.</p>
-                </div>
-            </div>
-
-            <div class="question-card">
-                <div class="question-part">
-                    <h3 class="question">This is the Question of the first article</h3>
-                </div>
-                <hr>
-                <div class="answer-part">
-                    <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nisi perferendis quisquam odit ad tempore fugit? Excepturi tempora cum placeat dolores voluptas at reprehenderit, corporis maiores, repellat cupiditate repellendus, esse deleniti omnis! Blanditiis eos at error odit quos porro minima repellat expedita corrupti quo suscipit magnam id, dolorum doloribus cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim aliquam ut, voluptas commodi tempore sunt temporibus nesciunt doloremque reprehenderit blanditiis incidunt voluptatem nobis hic nihil beatae accusantium quidem eaque esse repellendus, cupiditate eius placeat! Nulla perspiciatis delectus sint cum nesciunt minima maxime sapiente labore eligendi, non, tempore, error molestiae.</p>
-                </div>
-            </div>
-
-            <div class="question-card">
-                <div class="question-part">
-                    <h3 class="question">This is the Question of the first article</h3>
-                </div>
-                <hr>
-                <div class="answer-part">
-                    <p class="answer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nisi perferendis quisquam odit ad tempore fugit? Excepturi tempora cum placeat dolores voluptas at reprehenderit, corporis maiores, repellat cupiditate repellendus, esse deleniti omnis! Blanditiis eos at error odit quos porro minima repellat expedita corrupti quo suscipit magnam id, dolorum doloribus cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim aliquam ut, voluptas commodi tempore sunt temporibus nesciunt doloremque reprehenderit blanditiis incidunt voluptatem nobis hic nihil beatae accusantium quidem eaque esse repellendus, cupiditate eius placeat! Nulla perspiciatis delectus sint cum nesciunt minima maxime sapiente labore eligendi, non, tempore, error molestiae.</p>
-                </div>
-            </div>
         </div>
-
-
     </section>
+
+    <script src="./js/api.js"></script>
+<script type="text/javascript">
+  archipedia.loadFor("getQuestions");
+</script>
 </body>
 </html>

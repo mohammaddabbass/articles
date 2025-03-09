@@ -9,19 +9,26 @@
 </head>
 <body>
     <section class="faqs">
-        <form class="form question-answer-form" action="">
+        <form id="question-form" class="form question-answer-form" action="">
 
             <div class="form-group">
                 <label for="question">Question</label>
-                <input class="input-field" type="text" name="" id="question" placeholder="Ask a question...">
+                <input id="question-text" class="input-field" type="text" name="" id="question" placeholder="Ask a question...">
             </div>
 
             <div class="form-group">
                 <label for="answer">Answer</label>
-                <textarea rows="9" name="answer" id="answer" placeholder="Answer..."></textarea>
+                <textarea id="answer" rows="7" name="answer" id="answer" placeholder="Answer..."></textarea>
             </div>
+
+            <button class="button primary-btn" type="submit">Send</button>
 
         </form>
     </section>
+
+    <script src="./js/api.js"></script>
+    <script type="text/javascript">
+        archipedia.loadFor("addQuestion");
+      </script>
 </body>
 </html>
