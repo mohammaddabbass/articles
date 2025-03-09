@@ -82,6 +82,7 @@ archipedia.load_signup = async () => {
 
             const result = await archipedia.post_data(archipedia.signup.signup_api, formData);
             console.log(result);
+            console.log(result.user);
             if(result && result.user) {
                 console.log("signed up user is: ", result.user);
                 localStorage.setItem('user', JSON.stringify(result.user));
@@ -184,7 +185,8 @@ archipedia.load_addQuestion = async () => {
             console.log(result);
 
             if(result && result.message) {
-                console.log("this is the message fromm the result", result);
+                console.log("this is the message from the result", result);
+                window.location.href = "home.html";
             }
         } catch (error) {
             console.log(error);

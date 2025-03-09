@@ -1,4 +1,5 @@
 <?php 
+require '../../connection/connection.php';
 
 $sql_questions = "CREATE TABLE IF NOT EXISTS questions (
     question_id INT NOT NULL AUTO_INCREMENT,
