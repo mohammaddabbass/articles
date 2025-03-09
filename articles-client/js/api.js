@@ -49,7 +49,7 @@ archipedia.load_login = async () => {
             if(result && result.user) {
                 console.log("logged in user is: ", result.user);
                 localStorage.setItem('user', JSON.stringify(result.user));
-                // window.location.href = "home.html";
+                window.location.href = "home.html";
             }
         } catch (error) {
             console.log(error);
@@ -82,6 +82,12 @@ archipedia.load_signup = async () => {
 
             const result = await archipedia.post_data(archipedia.signup.signup_api, formData);
             console.log(result);
+            console.log(result);
+            if(result && result.user) {
+                console.log("signed up user is: ", result.user);
+                localStorage.setItem('user', JSON.stringify(result.user));
+                window.location.href = "home.html";
+            }
         } catch (error) {
             
         }
