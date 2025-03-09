@@ -98,6 +98,24 @@ archipedia.load_getQuestions = async () => {
     archipedia.getQuestions = {};
     archipedia.getQuestions.getQuestions_api = archipedia.base_api + "getQuestions.php";
 
+    archipedia.getQuestions.search = () => {
+        document.getElementById("search-input").addEventListener("input", function () {
+            const query = this.value.toLowerCase();
+            
+            document.querySelectorAll(".question-card").forEach(card => {
+                const questionText = card.querySelector(".question").textContent.toLowerCase();
+                const answerText = card.querySelector(".answer").textContent.toLowerCase();
+                
+                if (questionText.includes(query) || answerText.includes(query)) {
+                    card.style.display = "flex"; 
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    }
+
+
     try {
         const result = await archipedia.get_data(archipedia.getQuestions.getQuestions_api);
         console.log(result);
@@ -120,11 +138,14 @@ archipedia.load_getQuestions = async () => {
                 </div>`;
                 questionsContainer.innerHTML += questionCard;
             });
+
+            archipedia.getQuestions.search();
         }
 
     } catch (error) {
         console.log(error);
     }
+
 }
 
 
