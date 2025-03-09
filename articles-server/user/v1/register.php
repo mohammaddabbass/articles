@@ -34,18 +34,16 @@ if($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
     if($user->createUser($userSkeleton)) {
         $userDetails = $user->getUser($email);
-        $response = [
-            "message" => "User registered successfully",
-            "user" => [
-                "id" => $userDetails->getUserId(),  
-                "email" => $userDetails->getEmail(),
-                "first_name" => $userDetails->getFirstName(),
-                "last_name" => $userDetails->getLastName(),
-            ]
-        ];
 
         http_response_code(201);
-        echo json_encode(["message" => "user registerd successfully!", $response]);
+        echo json_encode([
+        "message" => "user registerd successfully!",           
+        "user" => [
+            "id" => $userDetails->getUserId(),  
+            "email" => $userDetails->getEmail(),
+            "first_name" => $userDetails->getFirstName(),
+            "last_name" => $userDetails->getLastName(),
+        ]]);
     } else {
         http_response_code(500);
         echo json_encode(["message" => "Failed to register user"]);
