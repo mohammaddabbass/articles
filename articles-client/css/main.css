@@ -1,0 +1,157 @@
+:root {
+    --primary-color: #3b413c;
+    --secondary-color: #9db5b2;
+    --dark-color: #0b0909;
+    --light-color: #FFFFFF;
+    --background-color: #daf0ee;
+
+    --border-radius: 12px;
+    --global-shadow: 3px 4px 6px rgba(50, 50, 50, 0.386);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  'Trebuchet MS', sans-serif;
+    background-color: var(--background-color);
+}
+
+
+.button {
+    border: none;
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: var(--global-shadow);
+
+}
+
+.button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    opacity: 0.7;
+    transform: translateY(-0.5px);
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #daf0ee;
+}
+
+.primary-outline-btn {
+    border: 3px solid var(--primary-color);
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+
+.form {
+    height: 55vh;
+    width: 23vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--global-shadow);
+}
+
+.form-group {
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-label {
+    font-size: 1.2rem;
+}
+
+.input-field {
+    width: 100%;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.8rem 0.6rem;
+    background-color: #efefef;
+}
+
+.input-field:focus {
+    border-color: var(--secondary-color);
+    box-shadow: var(--primary-color);
+
+  }
+
+  textarea {
+    /* width: 100%; */
+    padding: 12px;
+    font-size: 16px;
+    border: var(--border-glass);
+    border-radius: var(--border-radius);
+    outline: none;
+  }
+
+
+.login-signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-signup .button {
+    width: 50%;
+}
+
+.login {
+    height: 48vh;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(74, 31, 0);
+}
+
+.title {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+@media screen and (max-width: 1300px) {
+    .form {
+        height: 50vh;
+        width: 50vw;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .form {
+        height: 50vh;
+        width: 90vw;
+        padding: 2rem;
+    }
+}
+
+
+
+
+
+
+
+.question-card {
+
+
+}
