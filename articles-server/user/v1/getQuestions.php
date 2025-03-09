@@ -5,7 +5,7 @@ require_once  '../../models/QuestionSkeleton.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $user = new User($conn); 
+    // $user = new User($conn); 
     $questions = new Question($conn);
 
     $questionsList = $questions->getQuestions();
