@@ -4,7 +4,7 @@ archipedia.base_api = "http://localhost/articles/articles-server/user/v1/";
 
 archipedia.get_data = async(url) => {
     try {
-        const response = axios.get(url);
+        const response = await axios.get(url);
         return response.data;
     } catch (error) {
         console.log(error)
@@ -93,4 +93,17 @@ archipedia.load_signup = async () => {
         }
     })
 
+}
+
+archipedia.load_getQuestions = async () => {
+    archipedia.getQuestions = {};
+    archipedia.getQuestions.getQuestions_api = archipedia.base_api + "getQuestions.php";
+
+    try {
+        const result = await archipedia.get_data(archipedia.getQuestions.getQuestions_api);
+        console.log(result);
+
+    } catch (error) {
+        console.log(error);
+    }
 }
